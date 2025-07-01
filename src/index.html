@@ -4,7 +4,24 @@
         <center>
 <h1>Annoy LOU</h1>
 <img src="https://cachet.dunkirk.sh/users/U06EMBJH71S/r" />
-        </center>
+<button id="annoy_lou">Annoy Lou</button>      
+</center>
     </main>
 </body>
+<script>
+    function sendBoop() {
+        fetch("https://api.saahild.com/api/loubugger/free_noise", {
+        method: "POST"
+    }).then(d=>{
+        if(d.ok) {
+            alert("I Bugged lou for ya!")
+        } else {
+            d.text().then(text => {
+                alert("Error: " + text);
+            });
+        }
+    })
+    }
+    document.getElementById("annoy_lou").addEventListener("click", sendBoop);
+</script>
 </html>

@@ -11,7 +11,7 @@ function createWindow() {
             contextIsolation: false,
         },
     });
-    window.loadFile("index.html");
+    window.loadFile("src/index.html");
 }
 
 app.on("ready", () => {
