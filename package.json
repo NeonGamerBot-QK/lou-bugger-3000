@@ -38,6 +38,9 @@
   "license": "ISC",
   "devDependencies": {
     "electron": "^37.1.0",
-    "electron-builder": "^26.0.12"
+    "electron-builder": "^26.0.12",
+    "ethers": "^6.15.0",
+    "express": "^5.1.0",
+    "uuid": "^11.1.0"
   }
 }
