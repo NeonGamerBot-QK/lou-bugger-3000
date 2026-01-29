@@ -1,10 +1,11 @@
 const fs = require("fs");
 const path = require("path");
-const amount_paid_usd = 5.0;
+const amount_paid_usd = .5;
+const VICTIM = "U07L45W79E1"
 const tokens = fs
   .readFileSync(path.join(__dirname, "../tokens.txt"))
   .toString()
-  .split(",");
+  .split(",").filter(t => t.startsWith("xox"));
 (async () => {
   for (let amount = 0; amount <= amount_paid_usd; amount += 0.5) {
     for (const token of tokens) {
@@ -18,8 +19,8 @@ const tokens = fs
           },
           method: "POST",
           body: JSON.stringify({
-            channel: "U07L45W79E1",
-            text: `pingy <@U07L45W79E1>`,
+            channel: VICTIM,
+            text: `go to sleep  <@${VICTIM}>`,
           }),
         }).then((r) => r.json()),
         fetch(`https://slack.com/api/chat.postMessage`, {
@@ -30,7 +31,7 @@ const tokens = fs
           method: "POST",
           body: JSON.stringify({
             channel: "C094KL52E8G",
-            text: `pingy <@U07L45W79E1>`,
+            text: `go to sleep <@${VICTIM}>`,
           }),
         }).then((r) => r.json()),
       ]);

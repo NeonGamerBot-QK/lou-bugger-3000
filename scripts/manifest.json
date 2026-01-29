@@ -1,0 +1,32 @@
+{
+  "display_information": {
+    "name": "name here",
+    "description": "bot owner by real neon",
+    "background_color": "#333333"
+  },
+  "features": {
+    "bot_user": {
+      "display_name": "name",
+      "always_online": false
+    }
+  },
+  "oauth_config": {
+    "scopes": {
+      "user": [
+        "chat:write",
+        "im:write",
+        "groups:write"
+      ],
+      "bot": [
+        "chat:write",
+        "im:write",
+        "groups:write"
+      ]
+    }
+  },
+  "settings": {
+    "org_deploy_enabled": false,
+    "socket_mode_enabled": false,
+    "token_rotation_enabled": false
+  }
+}
