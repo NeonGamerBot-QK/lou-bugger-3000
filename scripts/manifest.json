@@ -12,16 +12,8 @@
   },
   "oauth_config": {
     "scopes": {
-      "user": [
-        "chat:write",
-        "im:write",
-        "groups:write"
-      ],
-      "bot": [
-        "chat:write",
-        "im:write",
-        "groups:write"
-      ]
+      "user": ["chat:write", "im:write", "groups:write"],
+      "bot": ["chat:write", "im:write", "groups:write"]
     }
   },
   "settings": {
