@@ -1,11 +1,12 @@
 const fs = require("fs");
 const path = require("path");
-const amount_paid_usd = .5;
-const VICTIM = "U07L45W79E1"
+const amount_paid_usd = 0.5;
+const VICTIM = "U07L45W79E1";
 const tokens = fs
   .readFileSync(path.join(__dirname, "../tokens.txt"))
   .toString()
-  .split(",").filter(t => t.startsWith("xox"));
+  .split(",")
+  .filter((t) => t.startsWith("xox"));
 (async () => {
   for (let amount = 0; amount <= amount_paid_usd; amount += 0.5) {
     for (const token of tokens) {
